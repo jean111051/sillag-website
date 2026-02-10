@@ -127,26 +127,64 @@ body{
     line-height:1.7;
 }
 
-  .workflow{
+  /* ===== ACADEMIC FORMAL WORKFLOW ===== */
+
+.workflow{
   max-width:900px;
-  margin:auto;
-  text-align:left;
-  }
-  .step{
-  margin:18px 0;
-  padding:18px;
-  background:#051f78;
-  border-left:4px solid #facc15;
+  margin:50px auto;
+  padding-left:0;
+}
+
+/* STEP CONTAINER */
+.step{
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+
+  margin:22px 0;
+  padding:22px 24px;
+
+  background:#ffffff;
+  border-left:6px solid #02216c;
   border-radius:6px;
-  transition:0.3s;
-  }
-  .step:hover{
-  background:#000e3e;
-  }
-  footer{
-  text-align:center;
-  padding:25px;
-  background:#020617;
-  color:#c5cdd8;
-  }
-  
+
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+
+  color:#000e3e;
+  line-height:1.7;
+  transition:0.2s ease;
+}
+
+/* STEP NUMBER BADGE */
+.step::before{
+  content:attr(data-step);
+  min-width:34px;
+  height:34px;
+
+  background:#02216c;
+  color:#ffffff;
+
+  font-weight:600;
+  font-size:14px;
+
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-top:2px;
+}
+
+/* TITLE STYLE */
+.step strong{
+  display:block;
+  font-size:18px;
+  color:#02216c;
+  margin-bottom:4px;
+}
+
+/* SUBTLE HOVER (academic, not flashy) */
+.step:hover{
+  background:#f5f8ff;
+  border-left:6px solid #facc15;
+}
