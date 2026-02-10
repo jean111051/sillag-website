@@ -1,0 +1,47 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --primary-blue:#02216c;
+  --secondary-blue:#2f64e1;
+  --accent-yellow:#facc15;
+  --dark:#020617;
+}
+
+
+html,body{
+  width:100%;
+  min-height:100%;
+  font-family:"Poppins", Arial, sans-serif;
+  background:var(--primary-blue);
+  color:#fff;
+  scroll-behavior:smooth;
+}
+
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+
+button{
+  font-family:inherit;
+  border:none;
+  cursor:pointer;
+}
+
+
+main{
+  width:100%;
+}
