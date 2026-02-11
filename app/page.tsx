@@ -13,12 +13,15 @@ export default function Page() {
           <Image
             src="/img/psu-logo.jpg"
             alt="PSU Logo"
-            width={90}
-            height={90}
+            width={100}
+            height={100}
             className="logo-img"
             style={{ borderRadius: "50%" }}
           />
-          <div className="logo">SILLAG STARTUP</div>
+          <div className="logo-text">
+            <div className="logo">SILLAG STARTUP</div>
+            <p className="logo-subtext">Research & Innovation Hub</p>
+          </div>
         </div>
 
         <nav>
@@ -34,7 +37,10 @@ export default function Page() {
         className="hero"
         style={{ backgroundImage: "url('/img/img.png')" }}
       >
-        <h1>Startup Mapping & Research Commercialization</h1>
+        <h1>Connect Research, Innovation & Growth</h1>
+        <p style={{fontSize: "19px", fontWeight: 700, color: "#facc15"}}>
+          Sustainability, Innovation, Leadership, Linkages, Access and Growth
+        </p>
         <p>
           A blockchain-powered ecosystem connecting universities, researchers,
           and startups. Upload research, mint NFTs, and grow innovation —
