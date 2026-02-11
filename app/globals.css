@@ -15,17 +15,27 @@
 
 html,body{
   width:100%;
-  min-height:100%;
+  min-height:100vh;
   font-family:"Poppins", Arial, sans-serif;
   background:var(--primary-blue);
   color:#fff;
   scroll-behavior:smooth;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
+html {
+  overflow-x: hidden;
+}
+
+body{
+  overflow-x:hidden;
+}
 
 img{
   max-width:100%;
   display:block;
+  height:auto;
 }
 
 
@@ -44,6 +54,7 @@ button{
 
 main{
   width:100%;
+  overflow-x:hidden;
 }
 
 
@@ -56,6 +67,5 @@ footer{
   color:rgba(255,255,255,0.75);
   font-size:0.95rem;
   background:#02216c;
-}
+  width:100%;}
 footer a{color:rgba(255,255,255,0.85);text-decoration:underline}
-
