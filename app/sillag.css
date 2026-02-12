@@ -174,11 +174,10 @@ nav a:hover{
 .about-section .logo-img {
   display: block;
   border-radius: 50%;
-  /* responsive size */
   width: clamp(100px, 18vw, 260px);
   height: auto;
   margin-top:20px;
-  z-index: 3; /* keep logo above the overlay */
+  z-index: 3; 
 }
 
 @media (max-width: 768px) {
@@ -195,7 +194,6 @@ nav a:hover{
   .section-divider {
     max-width: 92%;
     height: 3px;
-    /* lower the divider on tablet (reduced offset) */
     bottom: calc(-1 * (var(--divider-h) + 8px));
     left: 50%;
     transform: translateX(-50%);
@@ -211,7 +209,6 @@ nav a:hover{
   .section-divider {
     max-width: 95%;
     height: 3px;
-    /* push the divider further down on small phones (reduced offset) */
     bottom: calc(-1 * (var(--divider-h) + 18px));
     left: 50%;
     transform: translateX(-50%);
@@ -227,16 +224,15 @@ nav a:hover{
   color:rgba(2,33,108,.9);
 }
 
-/* Gradient overlay like hero */
+
 .about-section::before{
   content: "";
   position: absolute;
   inset: 0;
-  /* use a CSS variable so opacity can be easily tuned */
   background: rgba(252, 252, 252, var(--about-overlay, 0.80));
 }
 
-/* Keep content above overlay */
+
 .about-section h2,
 .about-section p,
 .about-section .logo-group{
@@ -261,8 +257,23 @@ nav a:hover{
 
 /* ================= CORE FEATURES ================= */
 .section.core-features{
-  background:#f8fafc;
-  
+  background-image: url('/img/background2.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.section.core-features::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(248, 250, 252, var(--core-overlay, 0.35));
+  z-index: 0;
+}
+
+.section.core-features > * {
+  position: relative;
+  z-index: 1;
 }
 
 .core-title{
@@ -423,12 +434,37 @@ nav a:hover{
 /* ================= WORKFLOW ================= */
 .workflow-section{
   padding:100px 20px;
-  background:#ffffff;
+  position: relative;
   text-align:center;
+  background-color: #011650;
+}
+
+.workflow-section::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      rgba(2,33,108,.9),
+      rgba(2,33,108,.9)
+    );
+  background-size: cover;
+  background-position: center;
+
+  transform: scale(-1, -1);   /* 👈 flip horizontal AND vertical */
+  z-index: 0;
+}
+
+
+
+.workflow-section h2,
+.workflow-section .workflow {
+  position: relative;
+  z-index: 1;
 }
 
 .workflow-section h2{
   margin-bottom:70px;
+  color:white;
 }
 
 .workflow{
@@ -443,7 +479,7 @@ nav a:hover{
 .step{
   position:relative;
   width: clamp(200px, 24vw, 250px);
-  padding: clamp(28px,4vw,60px) 22px 28px;
+  padding: clamp(25px,4vw,50px) 20px 20px;
   background:#ffffff;
   border-radius:20px;
   box-shadow:0 14px 30px rgba(0,0,0,.06);
@@ -498,7 +534,7 @@ nav a:hover{
   text-align:center;
   width:100%;
   max-width:100%;
-  background:#ffffff;
+  background:#f8fafc;
   display:flex;
   flex-direction:column;
   align-items:center;

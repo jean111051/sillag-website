@@ -78,164 +78,154 @@ export default function Page() {
         </p>
       </section>
 
-      {/* ================= CORE FEATURES ================= */}
-      <section className="section core-features">
+      {/* ===== SHARED BACKGROUND AREA ===== */}
+<div className="features-bg">
 
-        <h2 className="core-title">
-          Zero-Cost Minting: Blockchain Publishing Made Easy
-        </h2>
+  {/* ================= CORE FEATURES ================= */}
+  <section className="section core-features">
 
-        {/* Feature Icons */}
-        <div className="core-icons">
-          <div className="core-icon-item">
-            <FiZap size={28} />
-            <p>Gas-Free Publishing</p>
-          </div>
+    <h2 className="core-title">
+      Zero-Cost Minting: Blockchain Publishing Made Easy
+    </h2>
 
-          <div className="core-icon-item">
-            <FiLock size={28} />
-            <p>Risk-Free</p>
-          </div>
+    <div className="core-icons">
+      <div className="core-icon-item">
+        <FiZap size={28} />
+        <p>Gas-Free Publishing</p>
+      </div>
 
-          <div className="core-icon-item">
-            <FiFileText size={28} />
-            <p>Seamless Workflow</p>
-          </div>
+      <div className="core-icon-item">
+        <FiLock size={28} />
+        <p>Risk-Free</p>
+      </div>
 
-          <div className="core-icon-item">
-            <FiBarChart2 size={28} />
-            <p>Transparent Tracking</p>
-          </div>
-        </div>
+      <div className="core-icon-item">
+        <FiFileText size={28} />
+        <p>Seamless Workflow</p>
+      </div>
 
-        {/* Ecosystem Mapping */}
-        <div className="ecosystem-wrapper">
-          <div className="ecosystem-text">
-            <h3>Ecosystem Mapping</h3>
-            <p>
-              Visualize your innovation impact by connecting universities,
-              researchers, and startups across Region 1.
-            </p>
+      <div className="core-icon-item">
+        <FiBarChart2 size={28} />
+        <p>Transparent Tracking</p>
+      </div>
+    </div>
 
-            <ul>
-              <li>✔ University Scorecards</li>
-              <li>✔ Innovation Family Tree</li>
-              <li>✔ Impact Radar</li>
-              <li>✔ Official Endorsements</li>
-            </ul>
-          </div>
-
-          <div className="ecosystem-map">
-            <img src="/img/mapping.png" alt="Ecosystem Map" />
-          </div>
-        </div>
-
-<div className="ecosystem-wrapper">
-            <div className="ecosystem-map">
-            <img src="/img/img5.png" alt="Automated Linking" />
-          </div>
-          <div className="ecosystem-text">
-            <h3>Automated Linking</h3>
-            <p>
-              Smart domain detection connects researchers automatically.
-            </p>
-
-            <ul>
-              <li>✔ Institutional Identity Verification</li>
-              <li>✔ Ecosystem Filtering</li>
-              <li>✔ Regional Visibility</li>
-              <li>✔ Innovation Mapping</li>
-            </ul>
-          </div>
-        </div>
-
-<div className="ecosystem-wrapper">
-          <div className="ecosystem-text">
-            <h3>Analytics & Reporting</h3>
-            <p>
-              Generate reports and track research impact with interactive dashboards.
-            </p>
-
-            <ul>
-              <li>✔ Gas Subsidy Transparency</li>
-              <li>✔ Research Output Visualization</li>
-              <li>✔ Privacy-first Innovation</li>
-              <li>✔ DOST-Compliant Automated Reporting</li>
-            </ul>
-          </div>
-
-          <div className="ecosystem-map">
-            <img src="/img/analytics.jpeg" alt="Analytics & Reporting"/>
-          </div>
-        </div>
-
-        {/* Solution Cards */}
-        <div className="solution-cards">
-          <div className="solution-card">
-            <h4>For Students & Researchers</h4>
-            <p>Prove ownership and mint research outputs as NFTs.</p>
-          </div>
-
-          <div className="solution-card">
-            <h4>For Startup Coaches</h4>
-            <p>Help startups tokenize and validate innovations.</p>
-          </div>
-
-          <div className="solution-card">
-            <h4>For University Admins</h4>
-            <p>Monitor ecosystem growth and research impact metrics.</p>
-          </div>
-        </div>
-
-      </section>
-
-      {/* ================= WORKFLOW ================= */}
-      <section className="workflow-section">
-        <h2>How It Works</h2>
-
-        <div className="workflow">
-          <div className="step">
-            <div className="step-icon">
-              <FiLock size={28} />
-            </div>
-            <h4>Secure Upload</h4>
-            <p>Researchers submit files with access control.</p>
-          </div>
-
-          <div className="step">
-            <div className="step-icon">
-              <FiZap size={28} />
-            </div>
-            <h4>Sponsored Transactions</h4>
-            <p>Makerspace Innovhub sponsors blockchain fees.</p>
-          </div>
-
-          <div className="step">
-            <div className="step-icon">
-              <FiFileText size={28} />
-            </div>
-            <h4>Mint & Store</h4>
-            <p>Files stored on IPFS and minted as NFTs.</p>
-          </div>
-
-          <div className="step">
-            <div className="step-icon">
-              <FiBarChart2 size={28} />
-            </div>
-            <h4>Visualize Impact</h4>
-            <p>Interactive dashboards show innovation growth.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= CTA ================= */}
-      <section className="section">
-        <h2>Built for Innovation Ecosystems</h2>
-        <p className="text">
-          Designed for universities, TBIs, and researchers in the Ilocos Region.
+    <div className="ecosystem-wrapper">
+      <div className="ecosystem-text">
+        <h3>Ecosystem Mapping</h3>
+        <p>
+          Visualize your innovation impact by connecting universities,
+          researchers, and startups across Region 1.
         </p>
-        <button className="btn">Join the Ecosystem</button>
-      </section>
+        <ul>
+          <li>✔ University Scorecards</li>
+          <li>✔ Innovation Family Tree</li>
+          <li>✔ Impact Radar</li>
+          <li>✔ Official Endorsements</li>
+        </ul>
+      </div>
+
+      <div className="ecosystem-map">
+        <img src="/img/mapping.png" alt="Ecosystem Map" />
+      </div>
+    </div>
+
+    <div className="ecosystem-wrapper">
+      <div className="ecosystem-map">
+        <img src="/img/img5.png" alt="Automated Linking" />
+      </div>
+
+      <div className="ecosystem-text">
+        <h3>Automated Linking</h3>
+        <p>Smart domain detection connects researchers automatically.</p>
+        <ul>
+          <li>✔ Institutional Identity Verification</li>
+          <li>✔ Ecosystem Filtering</li>
+          <li>✔ Regional Visibility</li>
+          <li>✔ Innovation Mapping</li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="ecosystem-wrapper">
+      <div className="ecosystem-text">
+        <h3>Analytics & Reporting</h3>
+        <p>
+          Generate reports and track research impact with interactive dashboards.
+        </p>
+        <ul>
+          <li>✔ Gas Subsidy Transparency</li>
+          <li>✔ Research Output Visualization</li>
+          <li>✔ Privacy-first Innovation</li>
+          <li>✔ DOST-Compliant Automated Reporting</li>
+        </ul>
+      </div>
+
+      <div className="ecosystem-map">
+        <img src="/img/analytics.jpeg" alt="Analytics & Reporting"/>
+      </div>
+    </div>
+
+    <div className="solution-cards">
+      <div className="solution-card">
+        <h4>For Students & Researchers</h4>
+        <p>Prove ownership and mint research outputs as NFTs.</p>
+      </div>
+
+      <div className="solution-card">
+        <h4>For Startup Coaches</h4>
+        <p>Help startups tokenize and validate innovations.</p>
+      </div>
+
+      <div className="solution-card">
+        <h4>For University Admins</h4>
+        <p>Monitor ecosystem growth and research impact metrics.</p>
+      </div>
+    </div>
+
+  </section>
+
+  {/* ================= WORKFLOW ================= */}
+  <section className="workflow-section">
+    <h2>How It Works</h2>
+
+    <div className="workflow">
+      <div className="step">
+        <div className="step-icon"><FiLock size={28} /></div>
+        <h4>Secure Upload</h4>
+        <p>Researchers submit files with access control.</p>
+      </div>
+
+      <div className="step">
+        <div className="step-icon"><FiZap size={28} /></div>
+        <h4>Sponsored Transactions</h4>
+        <p>Makerspace Innovhub sponsors blockchain fees.</p>
+      </div>
+
+      <div className="step">
+        <div className="step-icon"><FiFileText size={28} /></div>
+        <h4>Mint & Store</h4>
+        <p>Files stored on IPFS and minted as NFTs.</p>
+      </div>
+
+      <div className="step">
+        <div className="step-icon"><FiBarChart2 size={28} /></div>
+        <h4>Visualize Impact</h4>
+        <p>Interactive dashboards show innovation growth.</p>
+      </div>
+    </div>
+  </section>
+
+  {/* ================= CTA ================= */}
+  <section className="section cta-section">
+    <h2>Built for Innovation Ecosystems</h2>
+    <p className="text">
+      Designed for universities, TBIs, and researchers in the Ilocos Region.
+    </p>
+    <button className="btn">Join the Ecosystem</button>
+  </section>
+
+</div>
 
       {/* ================= FOOTER ================= */}
       <footer>
