@@ -1,9 +1,15 @@
+"use client";
+
 import Image from "next/image";
-import { FiLock, FiZap, FiFileText, FiBarChart2 } from "react-icons/fi";
+import { FiLock, FiZap, FiFileText, FiBarChart2, FiAward, FiTarget, FiTrendingUp } from "react-icons/fi";
+import { useState } from "react";
 import "./sillag.css";
 import "./globals.css";
 
 export default function Page() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <div>
 
@@ -11,222 +17,406 @@ export default function Page() {
       <header>
         <div className="logo-group">
           <Image
-            src="/img/psu-logo.jpg"
-            alt="PSU Logo"
+            src="/img/sillag-logo.png"
+            alt="SILLAG Logo"
             width={100}
             height={100}
             className="logo-img"
-            style={{ borderRadius: "50%" }}
           />
           <div className="logo-text">
-            <div className="logo">SILLAG STARTUP</div>
+            <div className="logo">SILLAG</div>
             <p className="logo-subtext">Research & Innovation Hub</p>
           </div>
         </div>
 
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">Features</a>
-          <a href="#">Workflow</a>
-          <a href="#">Contact</a>
+        <button
+          className={`hamburger ${menuOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav className={menuOpen ? "active" : ""}>
+          <a href="#home" onClick={toggleMenu}>Home</a>          
+          <a href="#features" onClick={toggleMenu}>Features</a>
+          <a href="#workflow" onClick={toggleMenu}>Workflow</a>
+          <a href="#contact" onClick={toggleMenu}>Contact</a>
         </nav>
+
+        {menuOpen && <div className="menu-overlay" onClick={toggleMenu}></div>}
       </header>
 
       {/* ================= HERO ================= */}
-      <section
-        className="hero"
-        style={{ backgroundImage: "url('/img/img.png')" }}
-      >
-        <h1>Connect Research, Innovation & Growth</h1>
-        <p style={{fontSize: "19px", fontWeight: 700, color: "#facc15"}}>
-          Sustainability, Innovation, Leadership, Linkages, Access and Growth
-        </p>
-        <p>
-          A blockchain-powered ecosystem connecting universities, researchers,
-          and startups. Upload research, mint NFTs, and grow innovation —
-          with zero gas fees through our sponsored transaction system.
-        </p>
-        <button className="btn">Get Started</button>
+            <section id="home" className="hero" style={{ backgroundImage: "url('/img/sillag-hero.png')" }}>
+
+        <div className="hero-content">
+          <div className="hero-badge">● BLOCKCHAIN POWERED ECOSYSTEM</div>
+          
+          <h1>
+            Connect <span className="highlight">Research,</span><br />
+            Innovation & Growth
+          </h1>
+          
+          <p className="hero-subtitle">
+            Sustainability, Innovation, Leadership, Linkages, Access and Growth
+          </p>
+          
+          <p className="hero-description">
+            A blockchain-powered ecosystem connecting universities, researchers,
+            and startups. Upload research, mint NFTs, and grow innovation —
+            with zero gas fees through our sponsored transaction system.
+          </p>
+          
+          <div className="hero-buttons">
+            <button className="btn btn-primary">Get Started</button>
+            <button className="btn btn-secondary">View Research</button>
+          </div>
+        </div>
+        
         <div className="section-divider"></div>
       </section>
 
       {/* ================= ABOUT ================= */}
-      <section className="about-section" style={{backgroundImage:"url('/img/img7.jpg')"}}>
-        <div className="logo-group">
-          <Image
-            src="/img/sillag-logo.png"
-            alt="SILLAG Logo"
-            width={120}
-            height={120}
-            className="logo-img"
-          />
+      <section className="about-section">
+        <div className="about-container">
+          <div className="about-image">
+            <img src="/img/img7.jpg" alt="SILLAG" />
+          </div>
+          
+          <div className="about-content">
+            <h2>About SILLAG</h2>
+            
+            <p className="about-text">
+              The <strong>SILLAG Startup Summit and Hackathon</strong> is a premier
+              entrepreneurship initiative hosted by <strong>Pangasinan State
+              University (PSU)</strong> in collaboration with the DOST-Region 1
+              SILLAG Consortium. It serves as a launchpad for{" "}
+              <em className="technopreneurship">technopreneurship</em> where innovators transform ideas into
+              scalable ventures.
+            </p>
+            
+            <p className="about-text">
+              Participating in SILLAG allows <strong>PSUnians</strong> to gain hands-on
+              experience in market validation and product development beyond the
+              classroom setting. We bridge the gap between academic theory and
+              real-world market impact.
+            </p>
+            
+            <div className="about-badges">
+              <div className="badge-item">
+                <svg className="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+                <span>Innovation</span>
+              </div>
+              
+              <div className="badge-item">
+                <svg className="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9 11l3 3L22 4"/>
+                </svg>
+                <span>Mentorship</span>
+              </div>
+              
+              <div className="badge-item">
+                <svg className="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="16 12 12 8 8 12"/>
+                  <line x1="12" y1="16" x2="12" y2="8"/>
+                </svg>
+                <span>Scalability</span>
+              </div>
+            </div>
+            
+            <a href="#mission" className="learn-more">
+              Learn more about our mission
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
         </div>
-
-        <h2>About SILLAG</h2>
-
-        <p className="about-text">
-          The <strong>SILLAG Startup Summit and Hackathon</strong> is a premier
-          entrepreneurship initiative hosted by Pangasinan State University (PSU)
-          in collaboration with the DOST-Region 1 SILLAG Consortium.
-          It serves as a launchpad for technopreneurship where innovators
-          transform ideas into scalable ventures.
-        </p>
-
-        <p className="about-text">
-          Participating in SILLAG allows PSUnians to gain hands-on experience
-          in market validation and product development beyond the classroom setting.
-        </p>
       </section>
 
       {/* ===== SHARED BACKGROUND AREA ===== */}
 <div className="features-bg">
 
   {/* ================= CORE FEATURES ================= */}
-  <section className="section core-features">
-
+        <section id="features" className="section core-features">
     <h2 className="core-title">
-      Zero-Cost Minting: Blockchain Publishing Made Easy
+     <span className="highlight-white">Zero-Cost Minting: </span><span className="highlight">Blockchain Publishing Made Easy</span>
     </h2>
+    
+    <p className="core-description">
+      Experience the future of academic publishing with zero gas fees. Our sponsored
+      transaction system allows researchers to mint NFTs of their work seamlessly.
+    </p>
 
-    <div className="core-icons">
-      <div className="core-icon-item">
-        <FiZap size={28} />
-        <p>Gas-Free Publishing</p>
+    <div className="core-grid">
+      <div className="core-card">
+        <div className="core-card-content">
+          <h4>Gas-Free Publishing</h4>
+          <p>Publish research without worrying about transaction costs or complex crypto-wallets. We handle the heavy lifting.</p>
+        </div>
+        <div className="core-card-icon">
+          <FiZap size={32} />
+        </div>
       </div>
 
-      <div className="core-icon-item">
-        <FiLock size={28} />
-        <p>Risk-Free</p>
+      <div className="core-card">
+        <div className="core-card-content">
+          <h4>Risk-Free</h4>
+          <p>Secure your intellectual property on-chain with military-grade encryption and decentralized storage protocols.</p>
+        </div>
+        <div className="core-card-icon">
+          <FiLock size={32} />
+        </div>
       </div>
 
-      <div className="core-icon-item">
-        <FiFileText size={28} />
-        <p>Seamless Workflow</p>
+      <div className="core-card">
+        <div className="core-card-content">
+          <h4>Seamless Workflow</h4>
+          <p>Integrates directly with institutional repositories and research portals for a frictionless experience.</p>
+        </div>
+        <div className="core-card-icon">
+          <FiFileText size={32} />
+        </div>
       </div>
 
-      <div className="core-icon-item">
-        <FiBarChart2 size={28} />
-        <p>Transparent Tracking</p>
+      <div className="core-card">
+        <div className="core-card-content">
+          <h4>Transparent Tracking</h4>
+          <p>Real-time verification and impact tracking for every minted publication. Full audit trails on-chain.</p>
+        </div>
+        <div className="core-card-icon">
+          <FiBarChart2 size={32} />
+        </div>
       </div>
     </div>
 
+  </section>
+
+  <section className="section ecosystem">
+    <div className="ecosystem-header">
+      <span className="ecosystem-main-badge">CORE FEATURES</span>
+      <h2 className="ecosystem-main-title">Platform Capabilities</h2>
+      <div className="title-underline"></div>
+    </div>
+    
+    {/* Ecosystem Mapping */}
     <div className="ecosystem-wrapper">
       <div className="ecosystem-text">
-        <h3>Ecosystem Mapping</h3>
+        <div className="capability-badge-wrapper">
+          <div className="capability-badge-icon">🌐</div>
+          <span className="capability-badge-label">GLOBAL IMPACT</span>
+        </div>
+        <h3>Ecosystem<br/>Mapping</h3>
         <p>
           Visualize your innovation impact by connecting universities,
-          researchers, and startups across Region 1.
+          researchers, and startups across Region 1. Gain a bird's eye
+          view of the entire research landscape with our interactive 3D tools.
         </p>
         <ul>
-          <li>✔ University Scorecards</li>
-          <li>✔ Innovation Family Tree</li>
-          <li>✔ Impact Radar</li>
-          <li>✔ Official Endorsements</li>
+          <li><span className="check-icon">✓</span> University Scorecards</li>
+          <li><span className="check-icon">✓</span> Innovation Family Tree</li>
+          <li><span className="check-icon">✓</span> Impact Radar</li>
+          <li><span className="check-icon">✓</span> Official Endorsements</li>
         </ul>
       </div>
 
-      <div className="ecosystem-map">
-        <img src="/img/mapping.png" alt="Ecosystem Map" />
+      <div className="ecosystem-visual">
+        <div className="browser-mockup">
+          <div className="browser-header">
+            <div className="browser-dot red"></div>
+            <div className="browser-dot yellow"></div>
+            <div className="browser-dot green"></div>
+            <div className="browser-address-bar"></div>
+          </div>
+          <div className="browser-content">
+            <img src="/img/maps.png" alt="Ecosystem Map" />
+            <div className="floating-marker marker-1">📍</div>
+            <div className="floating-marker marker-2">📍</div>
+            <div className="floating-marker marker-3">📍</div>
+          </div>
+        </div>
+        <div className="glow-effect glow-primary"></div>
       </div>
     </div>
 
-    <div className="ecosystem-wrapper">
-      <div className="ecosystem-map">
-        <img src="/img/img5.png" alt="Automated Linking" />
+    {/* Automated Linking */}
+    <div className="ecosystem-wrapper reverse">
+      <div className="ecosystem-visual">
+        <div className="browser-mockup">
+          <div className="browser-header">
+            <div className="browser-dot red"></div>
+            <div className="browser-dot yellow"></div>
+            <div className="browser-dot green"></div>
+            <div className="browser-address-bar"></div>
+          </div>
+          <div className="browser-content">
+            <img src="/img/linking.png" alt="Automated Linking" />
+            <div className="overlay-banner">
+              <span className="banner-icon">🔗</span>
+              <span className="banner-text">Identifying cross-discipline matches...</span>
+              <div className="progress-bar">
+                <div className="progress-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="glow-effect glow-blue"></div>
       </div>
 
       <div className="ecosystem-text">
-        <h3>Automated Linking</h3>
-        <p>Smart domain detection connects researchers automatically.</p>
-        <ul>
-          <li>✔ Institutional Identity Verification</li>
-          <li>✔ Ecosystem Filtering</li>
-          <li>✔ Regional Visibility</li>
-          <li>✔ Innovation Mapping</li>
-        </ul>
-      </div>
-    </div>
-
-    <div className="ecosystem-wrapper">
-      <div className="ecosystem-text">
-        <h3>Analytics & Reporting</h3>
+        <div className="capability-badge-wrapper">
+          <div className="capability-badge-icon yellow">⚡</div>
+          <span className="capability-badge-label">SMART DETECTION</span>
+        </div>
+        <h3>Automated<br/>Linking</h3>
         <p>
-          Generate reports and track research impact with interactive dashboards.
+          Smart domain detection connects researchers automatically. No
+          manual tagging required—our system identifies affiliations and
+          builds bridges between disciplines instantly.
         </p>
         <ul>
-          <li>✔ Gas Subsidy Transparency</li>
-          <li>✔ Research Output Visualization</li>
-          <li>✔ Privacy-first Innovation</li>
-          <li>✔ DOST-Compliant Automated Reporting</li>
+          <li><span className="check-icon">✓</span> Institutional Identity Verification</li>
+          <li><span className="check-icon">✓</span> Ecosystem Filtering</li>
+          <li><span className="check-icon">✓</span> Regional Visibility</li>
+          <li><span className="check-icon">✓</span> Innovation Mapping</li>
         </ul>
-      </div>
-
-      <div className="ecosystem-map">
-        <img src="/img/analytics.jpeg" alt="Analytics & Reporting"/>
       </div>
     </div>
 
+    {/* Analytics & Reporting */}
+    <div className="ecosystem-wrapper">
+      <div className="ecosystem-text">
+        <div className="capability-badge-wrapper">
+          <div className="capability-badge-icon green">📊</div>
+          <span className="capability-badge-label">DATA INSIGHTS</span>
+        </div>
+        <h3>Analytics &<br/>Reporting</h3>
+        <p>
+          Generate reports and track research impact with interactive
+          dashboards. Visualize growth metrics and compliance status in
+          real-time.
+        </p>
+        <ul>
+          <li><span className="check-icon">✓</span> Gas Subsidy Transparency</li>
+          <li><span className="check-icon">✓</span> Research Output Visualization</li>
+          <li><span className="check-icon">✓</span> Privacy-first Innovation</li>
+          <li><span className="check-icon">✓</span> DOST-Compliant Automated Reporting</li>
+        </ul>
+      </div>
+
+      <div className="ecosystem-visual">
+        <div className="browser-mockup">
+          <div className="browser-header">
+            <div className="browser-dot red"></div>
+            <div className="browser-dot yellow"></div>
+            <div className="browser-dot green"></div>
+            <div className="browser-address-bar"></div>
+          </div>
+          <div className="browser-content">
+            <img src="/img/analytics.png" alt="Analytics & Reporting"/>
+          </div>
+        </div>
+        <div className="border-outline"></div>
+      </div>
+    </div>
+
+    {/* Solution Cards */}
     <div className="solution-cards">
       <div className="solution-card">
+        <div className="solution-icon-circle">
+          <FiAward size={32} />
+        </div>
         <h4>For Students & Researchers</h4>
-        <p>Prove ownership and mint research outputs as NFTs.</p>
+        <p>Prove ownership and mint research outputs as NFTs. Secure your intellectual property on the blockchain.</p>
       </div>
-
-      <div className="solution-card">
+      <div className="solution-card featured">
+        <div className="featured-bar"></div>
+        <div className="solution-icon-circle yellow">
+          <FiTarget size={32} />
+        </div>
         <h4>For Startup Coaches</h4>
-        <p>Help startups tokenize and validate innovations.</p>
+        <p>Help startups tokenize and validate innovations. Provide expert guidance with data-backed insights.</p>
       </div>
 
       <div className="solution-card">
+        <div className="solution-icon-circle">
+          <FiTrendingUp size={32} />
+        </div>
         <h4>For University Admins</h4>
-        <p>Monitor ecosystem growth and research impact metrics.</p>
+        <p>Monitor ecosystem growth and research impact metrics. Manage institutional rankings and visibility effortlessly.</p>
       </div>
     </div>
 
   </section>
 
   {/* ================= WORKFLOW ================= */}
-  <section className="workflow-section">
-    <h2>How It Works</h2>
+        <section id="workflow" className="workflow-section">
+    <div className="workflow-header">
+      <h2>How It Works</h2>
+      <div className="workflow-underline"></div>
+    </div>
 
-    <div className="workflow">
-      <div className="step">
-        <div className="step-icon"><FiLock size={28} /></div>
-        <h4>Secure Upload</h4>
-        <p>Researchers submit files with access control.</p>
+    <div className="workflow-grid-2x2">
+      <div className="workflow-card-box">
+        <div className="workflow-card-content">
+          <h4>Secure Upload</h4>
+          <p>Researchers submit files with enterprise-grade access control and encryption.</p>
+        </div>
+        <div className="workflow-card-icon">
+          <FiLock size={32} />
+        </div>
       </div>
 
-      <div className="step">
-        <div className="step-icon"><FiZap size={28} /></div>
-        <h4>Sponsored Transactions</h4>
-        <p>Makerspace Innovhub sponsors blockchain fees.</p>
+      <div className="workflow-card-box">
+        <div className="workflow-card-content">
+          <h4>Sponsored Transactions</h4>
+          <p>Makerspace Innovhub sponsors blockchain fees, ensuring a seamless user experience.</p>
+        </div>
+        <div className="workflow-card-icon">
+          <FiZap size={32} />
+        </div>
       </div>
 
-      <div className="step">
-        <div className="step-icon"><FiFileText size={28} /></div>
-        <h4>Mint & Store</h4>
-        <p>Files stored on IPFS and minted as NFTs.</p>
+      <div className="workflow-card-box">
+        <div className="workflow-card-content">
+          <h4>Mint & Store</h4>
+          <p>Files are securely stored on IPFS and minted as unique, verifiable NFTs.</p>
+        </div>
+        <div className="workflow-card-icon">
+          <FiFileText size={32} />
+        </div>
       </div>
 
-      <div className="step">
-        <div className="step-icon"><FiBarChart2 size={28} /></div>
-        <h4>Visualize Impact</h4>
-        <p>Interactive dashboards show innovation growth.</p>
+      <div className="workflow-card-box">
+        <div className="workflow-card-content">
+          <h4>Visualize Impact</h4>
+          <p>Interactive dashboards show real-time innovation growth and research impact.</p>
+        </div>
+        <div className="workflow-card-icon">
+          <FiBarChart2 size={32} />
+        </div>
       </div>
     </div>
   </section>
 
   {/* ================= CTA ================= */}
-  <section className="section cta-section">
+  <section id="contact" className="section cta-section">  <div className="cta-card">
     <h2>Built for Innovation Ecosystems</h2>
-    <p className="text">
-      Designed for universities, TBIs, and researchers in the Ilocos Region.
-    </p>
-    <button className="btn">Join the Ecosystem</button>
-  </section>
-
-</div>
-
+    <p className="text">Designed for universities, TBIs, and researchers in the Ilocos Region.</p>
+    <button className="btn cta-btn">
+      Join the Ecosystem <span style={{ marginLeft: 8 }}>→</span>
+    </button>
+  </div>
+</section>
+      </div>
       {/* ================= FOOTER ================= */}
       <footer>
         © 2026 SILLAG System — Powered by Makerspace Innovhub OPC
