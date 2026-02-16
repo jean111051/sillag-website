@@ -53,7 +53,7 @@ export default function Page() {
             <section id="home" className="hero" style={{ backgroundImage: "url('/img/sillag-hero.png')" }}>
 
         <div className="hero-content">
-          <div className="hero-badge">● BLOCKCHAIN POWERED ECOSYSTEM</div>
+          <div className="hero-badge">BLOCKCHAIN POWERED ECOSYSTEM</div>
           
           <h1>
             Connect <span className="highlight">Research,</span><br />
@@ -199,134 +199,73 @@ export default function Page() {
     </div>
 
   </section>
+{/* ================= PLATFORM CAPABILITIES ================= */}
+<section className="capabilities-new">
+  <div className="cap-header">
+    <span className="cap-badge">CORE FEATURES</span>
+    <h2>Platform <span className="highlight">Capabilities</span></h2>
+    <div className="cap-underline"></div>
+    <p className="cap-intro">
+      Empowering the Ilocos Region through cutting-edge blockchain technology, advanced data visualization, and automated research linking.
+    </p>
+  </div>
 
-  <section className="section ecosystem">
-    <div className="ecosystem-header">
-      <span className="ecosystem-main-badge">CORE FEATURES</span>
-      <h2 className="ecosystem-main-title">Platform Capabilities</h2>
-      <div className="title-underline"></div>
-    </div>
-    
-    {/* Ecosystem Mapping */}
-    <div className="ecosystem-wrapper">
-      <div className="ecosystem-text">
-        <div className="capability-badge-wrapper">
-          <div className="capability-badge-icon">🌐</div>
-          <span className="capability-badge-label">GLOBAL IMPACT</span>
+  <div className="cap-container">
+    {/* Capability 1: Ecosystem Mapping */}
+    <div className="cap-card" style={{ backgroundImage: "linear-gradient(to right, rgba(0,0,0,0.7) 40%, transparent), url('/img/1st.png')" }}>
+      <div className="cap-card-content">
+        <div className="cap-type">
+          <FiZap className="cap-type-icon" /> <span>GLOBAL IMPACT</span>
         </div>
-        <h3>Ecosystem<br/>Mapping</h3>
-        <p>
-          Visualize your innovation impact by connecting universities,
-          researchers, and startups across Region 1. Gain a bird's eye
-          view of the entire research landscape with our interactive 3D tools.
-        </p>
-        <ul>
-          <li><span className="check-icon">✓</span> University Scorecards</li>
-          <li><span className="check-icon">✓</span> Innovation Family Tree</li>
-          <li><span className="check-icon">✓</span> Impact Radar</li>
-          <li><span className="check-icon">✓</span> Official Endorsements</li>
+        <h3>Ecosystem Mapping</h3>
+        <p>Visualize your innovation impact by connecting universities, researchers, and startups across Region 1. Gain a bird's eye view of the entire research landscape with our interactive mapping tools.</p>
+        <ul className="cap-list">
+          <li><FiAward /> University Scorecards</li>
+          <li><FiAward /> Innovation Family Tree</li>
+          <li><FiAward /> Impact Radar</li>
+          <li><FiAward /> Official Endorsements</li>
         </ul>
-      </div>
-
-      <div className="ecosystem-visual">
-        <div className="browser-mockup">
-          <div className="browser-header">
-            <div className="browser-dot red"></div>
-            <div className="browser-dot yellow"></div>
-            <div className="browser-dot green"></div>
-            <div className="browser-address-bar"></div>
-          </div>
-          <div className="browser-content">
-            <img src="/img/maps.png" alt="Ecosystem Map" />
-            <div className="floating-marker marker-1">📍</div>
-            <div className="floating-marker marker-2">📍</div>
-            <div className="floating-marker marker-3">📍</div>
-          </div>
-        </div>
-        <div className="glow-effect glow-primary"></div>
+        {/* <button className="cap-btn">Learn more about Mapping →</button> */}
       </div>
     </div>
 
-    {/* Automated Linking */}
-    <div className="ecosystem-wrapper reverse">
-      <div className="ecosystem-visual">
-        <div className="browser-mockup">
-          <div className="browser-header">
-            <div className="browser-dot red"></div>
-            <div className="browser-dot yellow"></div>
-            <div className="browser-dot green"></div>
-            <div className="browser-address-bar"></div>
-          </div>
-          <div className="browser-content">
-            <img src="/img/linking.png" alt="Automated Linking" />
-            <div className="overlay-banner">
-              <span className="banner-icon">🔗</span>
-              <span className="banner-text">Identifying cross-discipline matches...</span>
-              <div className="progress-bar">
-                <div className="progress-fill"></div>
-              </div>
-            </div>
-          </div>
+    {/* Capability 2: Automated Linking (Right Aligned) */}
+    <div className="cap-card reverse" style={{ backgroundImage: "linear-gradient(to left, rgba(0,0,0,0.7) 40%, transparent), url('/img/2nd.png')" }}>
+      <div className="cap-card-content">
+        <div className="cap-type">
+          <FiZap className="cap-type-icon" /> <span>SMART DETECTION</span>
         </div>
-        <div className="glow-effect glow-blue"></div>
-      </div>
-
-      <div className="ecosystem-text">
-        <div className="capability-badge-wrapper">
-          <div className="capability-badge-icon yellow">⚡</div>
-          <span className="capability-badge-label">SMART DETECTION</span>
-        </div>
-        <h3>Automated<br/>Linking</h3>
-        <p>
-          Smart domain detection connects researchers automatically. No
-          manual tagging required—our system identifies affiliations and
-          builds bridges between disciplines instantly.
-        </p>
-        <ul>
-          <li><span className="check-icon">✓</span> Institutional Identity Verification</li>
-          <li><span className="check-icon">✓</span> Ecosystem Filtering</li>
-          <li><span className="check-icon">✓</span> Regional Visibility</li>
-          <li><span className="check-icon">✓</span> Innovation Mapping</li>
+        <h3>Automated Linking</h3>
+        <p>Smart domain detection connects researchers automatically. No manual tagging required—our system identifies affiliations and builds bridges between disciplines instantly.</p>
+        <ul className="cap-list">
+          <li><FiAward /> Institutional Identity Verification</li>
+          <li><FiAward /> Ecosystem Filtering</li>
+          <li><FiAward /> Regional Visibility</li>
+          <li><FiAward /> Innovation Mapping</li>
         </ul>
+        {/* <button className="cap-btn">Explore Smart Linking →</button> */}
       </div>
     </div>
 
-    {/* Analytics & Reporting */}
-    <div className="ecosystem-wrapper">
-      <div className="ecosystem-text">
-        <div className="capability-badge-wrapper">
-          <div className="capability-badge-icon green">📊</div>
-          <span className="capability-badge-label">DATA INSIGHTS</span>
+    {/* Capability 3: Analytics & Reporting */}
+    <div className="cap-card" style={{ backgroundImage: "linear-gradient(to right, rgba(0,0,0,0.7) 40%, transparent), url('/img/3rd.png')" }}>
+      <div className="cap-card-content">
+        <div className="cap-type">
+          <FiZap className="cap-type-icon" /> <span>DATA INSIGHTS</span>
         </div>
-        <h3>Analytics &<br/>Reporting</h3>
-        <p>
-          Generate reports and track research impact with interactive
-          dashboards. Visualize growth metrics and compliance status in
-          real-time.
-        </p>
-        <ul>
-          <li><span className="check-icon">✓</span> Gas Subsidy Transparency</li>
-          <li><span className="check-icon">✓</span> Research Output Visualization</li>
-          <li><span className="check-icon">✓</span> Privacy-first Innovation</li>
-          <li><span className="check-icon">✓</span> DOST-Compliant Automated Reporting</li>
+        <h3>Analytics & Reporting</h3>
+        <p>Generate reports and track research impact with interactive dashboards. Visualize growth metrics and compliance status in real-time, backed by blockchain transparency.</p>
+        <ul className="cap-list">
+          <li><FiAward /> Gas Subsidy Transparency</li>
+          <li><FiAward /> Research Output Visualization</li>
+          <li><FiAward /> Privacy-First Innovation</li>
+          <li><FiAward /> DOST-Compliant Reporting</li>
         </ul>
-      </div>
-
-      <div className="ecosystem-visual">
-        <div className="browser-mockup">
-          <div className="browser-header">
-            <div className="browser-dot red"></div>
-            <div className="browser-dot yellow"></div>
-            <div className="browser-dot green"></div>
-            <div className="browser-address-bar"></div>
-          </div>
-          <div className="browser-content">
-            <img src="/img/analytics.png" alt="Analytics & Reporting"/>
-          </div>
-        </div>
-        <div className="border-outline"></div>
+        {/* <button className="cap-btn">View Analytics Dashboard →</button> */}
       </div>
     </div>
+  </div>
+
 
     {/* Solution Cards */}
     <div className="solution-cards">
