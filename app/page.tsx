@@ -42,10 +42,10 @@ export default function Page() {
       partners: [
         {
           name: "Ilocos Norte MSMEO",
-          image: "/img/incubators/innovatehub.png",
+          image: "/img/incubators/ilocos_norte_msmeo.png",
         },
         { name: "PSU Aligwas TBI", image: "/img/incubators/psu.png" },
-        { name: "MMSU Bannuar TBI", image: "/img/incubators/agriinc.png" },
+        { name: "MMSU Bannuar TBI", image: "/img/incubators/bannuar.png" },
         { name: "MMSU TBI", image: "/img/incubators/mmsu.png" },
         { name: "MMSU Dap-Ayan ATBI", image: "/img/incubators/dapayan.png" },
         { name: "DMMMSU ATBI", image: "/img/incubators/dmmmsu.jpg" },
