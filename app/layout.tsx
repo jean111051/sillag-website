@@ -12,10 +12,20 @@ export const metadata: Metadata = {
   description: "Startup Mapping & Research Commercialization Platform",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      {/* Add suppressHydrationWarning here */}
+      <body 
+        style={{ margin: 0, padding: 0, overflow: "visible" }}
+        suppressHydrationWarning={true} 
+      >
+        {children}
+      </body>
     </html>
   );
 }
